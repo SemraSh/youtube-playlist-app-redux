@@ -3,17 +3,11 @@ import Player from './Player';
 import Search from './Search';
 
 class App extends React.Component {
-	constructor() {
-		super();
+	state = {
+		videoId: 'xsSnOQynTHs',
+	};
 
-		this.state = {
-			videoId: 'xsSnOQynTHs',
-		};
-
-		this.playVideo = this.playVideo.bind(this);
-	}
-
-	playVideo(videoId) {
+	playVideo = (videoId) => {
 		this.setState({
 			videoId: videoId,
 		});
