@@ -9,6 +9,6 @@ import App from './components/App';
 // const store = createStore(reducers);
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('root')
+	<App />,
+	document.getElementById('root')
 );
