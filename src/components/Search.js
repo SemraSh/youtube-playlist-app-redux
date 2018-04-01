@@ -4,25 +4,19 @@ import SearchResults from './SearchResults';
 import search from '../services/search';
 
 class Search extends React.Component {
-	constructor(props) {
-		super(props);
+	state = {
+		query: '',
+		results: [],
+	};
 
-		this.state = {
-			query: '',
-			results: [],
-		};
 
-		this.handleChange = this.handleChange.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
-	}
-
-	handleChange(event) {
+	handleChange = (event) => {
 		this.setState({
 			query: event.target.value,
 		});
 	}
 
-	handleSubmit(event) {
+	handleSubmit = (event) => {
 		event.preventDefault();
 
 		search(this.state.query)
