@@ -9,16 +9,9 @@ class Player extends React.Component {
 				height: '390',
 				width: '640',
 				videoId: this.props.videoId,
-				// events: {
-				// 	onStateChange: this.onPlayerStateChange,
-				// },
 			});
 		};
 	}
-
-	// onPlayerStateChange = ( event ) => {
-
-	// }
 
 	componentWillReceiveProps(nextProps) {
 		const { videoId } = nextProps;

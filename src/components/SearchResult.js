@@ -10,7 +10,7 @@ class SearchResult extends React.Component {
 			<li
 				className="result-item"
 				onClick={ event => {
-					this.props.playVideo(videoId);
+					this.props.updateVideoId(videoId);
 				}}
 			>
 				<img

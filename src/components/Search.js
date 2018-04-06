@@ -21,7 +21,6 @@ class Search extends React.Component {
 
 		search(this.state.query)
 			.then(results => {
-				debugger;
 				this.setState({
 					results: results.items,
 				});
@@ -37,7 +36,6 @@ class Search extends React.Component {
 					query={this.state.query}
 				/>
 				<SearchResults
-					playVideo={this.props.playVideo}
 					results={this.state.results}
 				/>
 			</div>

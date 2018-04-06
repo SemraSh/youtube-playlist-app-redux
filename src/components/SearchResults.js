@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchResult from './SearchResult';
+import SearchResultContainer from '../containers/SearchResultContainer';
 
 class SearchResults extends React.Component {
 	render() {
@@ -7,8 +8,7 @@ class SearchResults extends React.Component {
 			<div>
 				<ul className="results-list">
 					{this.props.results.map( result => {
-						return <SearchResult
-							playVideo={this.props.playVideo}
+						return <SearchResultContainer
 							result={result}
 							key={result.id.videoId}
 						/>;
