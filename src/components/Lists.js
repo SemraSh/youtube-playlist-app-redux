@@ -7,6 +7,12 @@ class Lists extends React.Component {
   	this.props.addList(event.target.newList.value);
   	event.target.newList.value = '';
   }
+
+  changeActivePlaylist = (listName) => {
+  	return (event) => {
+  		this.props.showList(listName);
+  	};
+  } 
   render() {
   	return (
   		<div>
@@ -26,8 +32,12 @@ class Lists extends React.Component {
   			</div>
   			<div>
   				<ul>
-  					{this.props.lists.map(list => (
-  						<li onClick={this.showPlaylist}>{list.name}</li>
+  					{this.props.lists.map((list, i) => (
+  						<li
+  							key={list + i}
+  							onClick={this.changeActivePlaylist(list.name)}>
+  							{list.name}
+  						</li>
   					))}
   				</ul>
   			</div>

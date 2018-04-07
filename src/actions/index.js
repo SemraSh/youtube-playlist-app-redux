@@ -31,3 +31,20 @@ export const addList = (listName) => ({
 	listName,
 });
 
+export const showList = (activeList) => ({
+	type: 'ACTIVATE_LIST',
+	activeList,
+});
+
+export const addVideoToPlaylist = (video) => {
+	return (dispatch, getState) => {
+		const state = getState();
+		dispatch(addVideoAction(video, state.activeList));
+	};
+};
+const addVideoAction = (video, listName) => ({
+	type: 'ADD_VIDEO_TO_PLAYLIST',
+	video,
+	listName,
+});
+
