@@ -1,6 +1,6 @@
 const videoId = (state = 'xsSnOQynTHs', action) => {
 	switch (action.type) {
-		case 'UPDATE_VIDEO_ID':
+		case 'UPDATE_VIDEOID':
 			return action.videoId;
 		default: return state;
 	}
